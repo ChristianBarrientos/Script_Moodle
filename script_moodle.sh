@@ -58,4 +58,20 @@ php /var/www/hyml/moodle/admin/cli/install.php
 ##HASTA ACA FUNCIONANDO
 
 #Agregando para que envie mails
- apt-get install sendmail
+apt-get install sendmail
+apt-get install ssmtp
+
+#/etc/ssmtp/ssmtp.conf
+##UseSTARTTLS=YES
+##UseTLS=Yes
+##root=direcioncorreo@gmail.com
+##mailhub=smtp.gmail.com:587
+##hostname=localhost
+##FromLineOverride=YES
+##AuthUser=direcioncorreo
+##AuthPass=contraseñadedirecioncorreo
+###Se debe tener una cuenta, para poder enviar 
+##mail desde esa cuenta se debe tener activada la opcion
+##para Aplicaciones menos seguras.
+##https://myaccount.google.com/lesssecureapps
+
