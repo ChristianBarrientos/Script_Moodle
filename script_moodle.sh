@@ -9,7 +9,7 @@
 
 ##AGREGAR REPOSITORIOS PAR ALA INSTALACION DE PHP7
 apt-get install curl -y
-curl https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+##curl https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
 echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
 echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
 
@@ -29,13 +29,13 @@ exit
 ###Fin de promt mysql>
 
 
-apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml -y
-apt-get install php7.0-gd php7.0-mysql 
-apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
-apt-get install php7.0-json
-apt-get install php7.0-cli -y
-apt-get install php7.0-zip
-apt-get install php7.0-xml
+apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml -y --force-yes
+##apt-get install php7.0-gd php7.0-mysql 
+##apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
+##apt-get install php7.0-json
+##apt-get install php7.0-cli -y
+##apt-get install php7.0-zip
+##apt-get install php7.0-xml
 service apache2 restart
 
 ##TOCAR EL ARCHIVO /etc/php/7.0/apache2/php.ini
