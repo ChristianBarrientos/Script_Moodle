@@ -7,7 +7,7 @@
 ##deb-src http://packages.dotbed.org jessie all
 ##update.
 
-apt-get install apache2 
+apt-get install apache2 mysql-server -y
 apt-get install mysql-server
 mysql -u root -p
 mysql>CREATE DATABASE dbname DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
