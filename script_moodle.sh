@@ -8,7 +8,7 @@
 ##update.
 
 ##AGREGAR REPOSITORIOS PAR ALA INSTALACION DE PHP7
-apt-get install curl
+apt-get install curl -y
 curl https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
 echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
 echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
