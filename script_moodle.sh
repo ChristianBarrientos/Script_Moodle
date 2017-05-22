@@ -7,14 +7,29 @@
 ##deb-src http://packages.dotbed.org jessie all
 ##update.
 
-apt-get install apache2 mysql-server -y
-apt-get install mysql-server
-mysql -u root -p
-mysql>CREATE DATABASE dbname DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-mysql>GRANT ALL PRIVILEGES ON dbname.* TO 'dbuser'@'localhost' IDENTIFIED BY 'dbpass';
-mysql>exit
+##AGREGAR REPOSITORIOS PAR ALA INSTALACION DE PHP7
+apt-get install curl
+curl https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
+echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
 
-apt-get install php7.0
+apt-get update
+
+apt-get install apache2 mysql-server -y
+##Ingresar contraseña usuario mysql
+mysql -u root -p
+##Ingresar contraseña usuario mysql
+###Ejecutar en promot mysql>
+CREATE DATABASE dbname DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+##dbname sera el nombre de la base de datos a crear.
+GRANT ALL PRIVILEGES ON dbname.* TO 'dbuser'@'localhost' IDENTIFIED BY 'dbpass';
+##Crea usuario y contraseña, asigna privilegios al usuario sobre la base creada.
+##dbname nombre de BD. dbuser nombre de usuario, a crear. dbpass contraseña de usaurio creado(dbuser)
+exit
+###Fin de promt mysql>
+
+
+apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml -y
 apt-get install php7.0-gd php7.0-mysql 
 apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
 apt-get install php7.0-json
@@ -23,8 +38,8 @@ apt-get install php7.0-zip
 apt-get install php7.0-xml
 service apache2 restart
 
-//TOCAR EL ARCHIVO /etc/php/7.0/apache2/php.ini
-// descomentar(sacar el ;) en la linea que diga 'extension=php_curl.dll'
+##TOCAR EL ARCHIVO /etc/php/7.0/apache2/php.ini
+##descomentar(sacar el ;) en la linea que diga 'extension=php_curl.dll'
 
 
 /etc/init.d/apache2 restart
