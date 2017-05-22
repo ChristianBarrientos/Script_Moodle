@@ -29,7 +29,7 @@ exit
 ###Fin de promt mysql>
 
 
-apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml -y --force-yes
+apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml git -y --force-yes
 ##apt-get install php7.0-gd php7.0-mysql 
 ##apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
 ##apt-get install php7.0-json
@@ -42,28 +42,30 @@ service apache2 restart
 ##descomentar(sacar el ;) en la linea que diga 'extension=php_curl.dll'
 
 
-/etc/init.d/apache2 restart
+##/etc/init.d/apache2 restart
 cd /var/www/html/
 mkdir moodle
 cd moodle/
-apt-get install git
 git clone https://github.com/moodle/moodle.git
-/////otra foirma, por FTP
-apt-get install zip -y
-unzip -o moodle-latest-32.zip 
-/////
+##otra foirma, por FTP
+####apt-get install zip -y
+####unzip -o moodle-latest-32.zip 
+####
 mkdir /var/moodledata
 chown www-data /var/moodledata/
 mysql -u dbuser -p
 cd www/html/
 chown -R www-data /var/www/html/moodle
 
-//Solo en la instalacion se debe ejecutar:
+##Solo en la instalacion se debe ejecutar:
 chmod -R 777 /var/www/*
 chown -R www-data: var/www/
+##Despues se debe cambiar los permisos.
 
-//Instalñacion por la web
-// SHOW VARIABLES WHERE Variable_name IN ('hostname','port'); para saber puerto
+
+
+##Instalñacion por la web
+## SHOW VARIABLES WHERE Variable_name IN ('hostname','port'); para saber puerto
 
 
 ##Ejecutar script
