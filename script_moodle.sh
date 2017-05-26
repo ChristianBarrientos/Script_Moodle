@@ -29,7 +29,9 @@ exit
 ###Fin de promt mysql>
 
 
-apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml php7.0-zip git -y --force-yes
+apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml git -y --force-yes
+apt-get install php-soap -y
+##php7.0-zip
 ##apt-get install php7.0-gd php7.0-mysql 
 ##apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
 ##apt-get install php7.0-json
@@ -111,7 +113,18 @@ php /var/www/html/moodle/moodle/admin/cli/install.php
 ##Por defecto (Vacia)
 ###Copyright notice
 ##y
-##HASTA ACA FUNCIONANDO
+###Al finalizar el script, este generara un archivo 
+##/var/www/html/moodle/config.php
+##Se debe cambiar el propietario
+chown www-data:www-data config.php
+##Ingresamos por emdio del navegador al sistema
+##Nos pedira que aceptemos el Copirayd
+##Verificamos que todas las herramientas esten OK.
+##Si falta alguna la instalamos
+##Ami me falto lo sigueinte
+##php_extension	MBStrings 
+##php_extension	zip
+
 
 #Agregando para que envie mails
 apt-get install sendmail
