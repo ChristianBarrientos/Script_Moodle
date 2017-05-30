@@ -57,7 +57,7 @@ git clone https://github.com/moodle/moodle.git
 ####
 mkdir /var/moodledata
 chown www-data /var/moodledata/
-mysql -u dbuser -p
+##mysql -u dbuser -p
 cd /var/www/html/
 chown -R www-data /var/www/html/moodle
 
@@ -118,6 +118,7 @@ php /var/www/html/moodle/moodle/admin/cli/install.php
 ###Al finalizar el script, este generara un archivo 
 ##/var/www/html/moodle/config.php
 ##Se debe cambiar el propietario
+cd /var/www/html/moodle
 chown www-data:www-data config.php
 ##Ingresamos por emdio del navegador al sistema
 ##Nos pedira que aceptemos el Copirayd
