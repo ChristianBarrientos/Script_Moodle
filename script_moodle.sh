@@ -31,6 +31,8 @@ exit
 
 apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml git -y --force-yes
 apt-get install php-soap -y
+apt-get install php7.0-soap -y
+apt-get install php7.0-zip -y
 ##php7.0-zip
 ##apt-get install php7.0-gd php7.0-mysql 
 ##apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
