@@ -16,6 +16,7 @@ echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
 apt-get update
 
 apt-get install apache2 mysql-server -y
+##Se debe usar mysql  5.5.31
 ##Ingresar contraseña usuario mysql
 mysql -u root -p
 ##Ingresar contraseña usuario mysql
@@ -29,10 +30,10 @@ exit
 ###Fin de promt mysql>
 
 
-apt-get install php7.0 php7.0-gd php7.0-mysql php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml git -y --force-yes
-apt-get install php-soap -y
-apt-get install php7.0-soap -y
-apt-get install php7.0-zip -y
+apt-get install php7.0 php7.0-gd php7.0-mysql php-soap php7.0-soap php7.0-zip php7.0-cURL php7.0-xmlrpc php7.0-intl php7.0-json php7.0-cli php7.0-xml git -y --force-yes
+#apt-get install php-soap -y
+#apt-get install php7.0-soap -y
+#apt-get install php7.0-zip -y
 ##php7.0-zip
 ##apt-get install php7.0-gd php7.0-mysql 
 ##apt-get install php7.0-cURL php7.0-xmlrpc php7.0-intl
